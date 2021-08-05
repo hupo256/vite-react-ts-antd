@@ -1,43 +1,26 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
-import './App.css'
+import praseImg from './1@2x.png'
+import styles from './mless.module.less'
+// import './App.css'
+
+const defaultImg = 'http://img.inbase.in-deco.com/crm-saas/img/games/default/';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
+  function touchNum(){
+    setCount(count + 1)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className={styles.mainBox}>
+      <p>Hello Vite + React!</p>
+      <h3 onClick={touchNum}>this is my father's world * {count}</h3>
+      <img src={logo} alt=""/>
+      <img src={praseImg} alt=""/>
+      <img src={`${defaultImg}wheelIcon.png`} alt=""/>
     </div>
   )
 }
