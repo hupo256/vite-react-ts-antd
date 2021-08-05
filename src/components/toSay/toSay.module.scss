@@ -1,0 +1,29 @@
+.titlebox {
+  font-size: 24px;
+  color: #c00;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.callbox {
+  padding: 2em;
+
+  h3 {
+    font-size: 20px;
+    color: #16a;
+  }
+
+  button {
+    background: #16c;
+    color: #fff;
+    padding: 1em 1.5em;
+    font-size: 16px;
+    border: 0;
+    margin: 1em;
+    border-radius: 5px;
+  }
+}

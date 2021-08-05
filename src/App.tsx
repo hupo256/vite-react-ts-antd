@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
-import praseImg from './1@2x.png'
+import praseImg from '@/static/1@2x.png'
 import styles from './mless.module.less'
-// import './App.css'
 
 const defaultImg = 'http://img.inbase.in-deco.com/crm-saas/img/games/default/';
-
 
 function App() {
   const [count, setCount] = useState(0)
