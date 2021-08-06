@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from './toSay.module.scss'
+import styles from './toSay.module.less'
 
 interface Props {
   btnTex: string
