@@ -1,10 +1,24 @@
 import { defineConfig } from 'vite'
+import styleImport from 'vite-plugin-style-import'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh()],
+  plugins: [
+    reactRefresh(),
+    styleImport({
+      libs: [
+        {
+          libraryName: 'antd',
+          esModule: true,
+          resolveStyle: (name) => {
+            return `antd/es/${name}/style/index`
+          },
+        },
+      ],
+    }),
+  ],
   resolve: {
     alias: {
       '~': path.resolve(__dirname, './'),
@@ -25,6 +39,9 @@ export default defineConfig({
           exclude: /(node_module)/, // 默认false，可以（reg）利用正则表达式排除某些文件夹的方法
         }),
       ],
+    },
+    preprocessorOptions: {
+      less: { javascriptEnabled: true }, // for antd es
     },
   },
 })

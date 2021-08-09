@@ -1,4 +1,5 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
+import { Button } from 'antd'
 import Page from '@comps/page/index'
 import styles from './ts.module.less'
 
@@ -19,7 +20,11 @@ interface Props {
 
 const ChildComponent = memo((props: Props) => {
   console.log('child render!')
-  return <button onClick={props.fn}>showTime</button>
+  return (
+    <Button type="primary" onClick={props.fn}>
+      showTime
+    </Button>
+  )
 })
 
 export default function Main(props: mainPro) {
@@ -45,7 +50,9 @@ export default function Main(props: mainPro) {
     <Page title="UseCall">
       <div className={styles.callbox}>
         <h3>index：{count}</h3>
-        <button onClick={() => setcount(count + 1)}>increase</button>
+        <Button type="primary" onClick={() => setcount(count + 1)}>
+          increase
+        </Button>
         <ChildComponent fn={ShowTime} />
 
         <p>{toShowTags().join('-')}</p>
