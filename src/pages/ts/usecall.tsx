@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
 import { Button } from 'antd'
-import Page from '@comps/page/index'
+import Page from '@comps/page'
 import styles from './ts.module.less'
 
 interface hty {

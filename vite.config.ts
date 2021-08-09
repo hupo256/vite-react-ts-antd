@@ -25,7 +25,8 @@ export default defineConfig({
       '@src': path.resolve(__dirname, 'src'),
       '@comps': path.resolve(__dirname, 'src/components'),
       '@service': path.resolve(__dirname, 'src/service'),
-      '@untils': path.resolve(__dirname, 'src/untils'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@static': path.resolve(__dirname, 'src/static'),
     },
   },
   css: {

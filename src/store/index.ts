@@ -1,1 +1,2 @@
 // store
+export const data = {}

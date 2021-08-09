@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Page from '@comps/page'
+import priseImg from '@static/1@2x.png'
 import Usecall from './usecall'
 import styles from './ts.module.less'
 
@@ -26,6 +27,7 @@ export default function TsSay(props: Props) {
         <span>Name: {name}</span>
         <Usecall history={history} />
 
+        <img src={priseImg} alt="img" />
         <a onClick={btnClick}>wwee</a>
       </h3>
     </Page>
